@@ -107,7 +107,7 @@ IMMIGRANTS (dim table)
 #### 4   Create table if not exists
 #### 5   Build ETL Processes
 #### 6   Insert into table
-
+<img width="1436" alt="Screenshot 2021-08-26 at 00 01 25" src="https://user-images.githubusercontent.com/50584494/130870324-04c676cf-2b45-42d4-9630-3ae1419e9b70.png">
 
 ### What is the use of each file
 *   dag folder: This contain the dag python script that setup the dag tasks.
@@ -124,6 +124,9 @@ IMMIGRANTS (dim table)
 
 *	Username: `admin`
 *	Password: `test`
+
+<img width="1436" alt="Screenshot 2021-08-26 at 00 01 25" src="https://user-images.githubusercontent.com/50584494/130870421-191a478c-0e42-4721-ba03-1ba41b379867.png">
+
 
 ### Additional Requirements
 
@@ -143,6 +146,11 @@ Solution: The Airflow considered in this project as pipeline management already 
 Qustion 3: If the database needs to be accessed by 100+ people
 
 Solution: The datawarehouse used in this project automatically creates snapshots that tracks changes to the cluster. The Amazon's Redshift would do the storage work. Redshift is a data warehouse cloud-based system, storing data on a peta-byte scale. Replication would be advisable especially in cases where the database users are in several geographical locations.
+
+
+
+<img width="1433" alt="Screenshot 2021-08-25 at 23 59 38" src="https://user-images.githubusercontent.com/50584494/130870148-86ca666f-5b5e-46fb-8746-d51bc4260109.png">
+
 
 
 
