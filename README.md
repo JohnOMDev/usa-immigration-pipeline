@@ -125,8 +125,7 @@ IMMIGRANTS (dim table)
 *	Username: `admin`
 *	Password: `test`
 
-<img width="1436" alt="Screenshot 2021-08-26 at 00 01 25" src="https://user-images.githubusercontent.com/50584494/130870421-191a478c-0e42-4721-ba03-1ba41b379867.png">
-
+<img width="1432" alt="Screenshot 2021-08-26 at 00 02 30" src="https://user-images.githubusercontent.com/50584494/130870615-498b6f8f-3929-4459-9b60-8910a6bd5621.png">
 
 ### Additional Requirements
 
