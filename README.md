@@ -109,6 +109,16 @@ IMMIGRANTS (dim table)
 
 ![ERD](https://user-images.githubusercontent.com/50584494/130909152-b0d60b1b-d6e1-4348-834f-6a950dedd2bd.png)
 
+
+### SAMPLE QUERY
+The number of male and female immigrants for the available years?
+
+	SELECT gender, COUNT(gender)
+	FROM immigrants
+	WHERE gender = 'M' or gender = 'F'
+	GROUP BY gender;
+
+
 ### Set up Environment
 *   Install or Update your python
 *	Install or update Airflow 
