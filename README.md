@@ -109,7 +109,7 @@ IMMIGRANTS (dim table)
 |-- resident_country: (varchar) The resident country of the immigrant
 |-- address: (varchar) Current US address of the immigrant (state code)
 
-![rsz_erd](https://user-images.githubusercontent.com/50584494/130911652-f0228484-83ff-4cd8-b2a2-d3f6bdd6b42b.png)
+![ERD (1)](https://user-images.githubusercontent.com/50584494/130912213-b933b1d9-5319-41ec-94a0-f8273299b815.png)
 
 
 ### SAMPLE QUERY
