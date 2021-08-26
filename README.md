@@ -11,8 +11,22 @@ This data comes from the US National Tourism and Trade Office. A data dictionary
 * U.S. City Demographic Data
 This data comes from OpenSoft. It is an opensource data which can be accessed either by manual downloading or api. https://public.opendatasoft.com/explore/dataset/us-cities-demographics/export/
 
+###	DATA Preprocessing and Modelling
+####	Preprocessing
+The data preprocessing involves three stages, namely,
+* Columns Renaming: This gives more intuituve easy to follow column name format.
+* Datatypes Cleaninng: Most columns data types were correct and change according to the data in the columns. For example, the Dates should have a DATE datatype format, year and month should be Integers, rather than instead of Floats as seen in some of the data. The have to be persistent.
+* Null values: The handling of null values were also given great consideration,they were easily identified, and renamed with "not provided" in order not to lose some vital rows. The preprocessing was achieved using Spark due to its fast, distributed data processing abilities - especially for large datasets(more than a million row).
 
-### The data set structure.
+####	Modelling
+The two datasets used for the analysis were loaded from the local computer, compiled and staged first to an S3 bucket which serves as the data lake in parquet file format. The intuition for staging it first into datalake is to have a month backup incase of error and have to rollback. The data were read from the s3, appllied preprocessing functions and later load into their respective table in Redshift which serves as the datawarehouse.
+The major tools used in the data modelling are Apache Spark, Amazon S3 and Amazon Redshift. The s3 also provides great opportunities ti analyse the data in serverless datawarehouse platform like athena if the cost of analysis on Redshift gets too high for the team. The Apache Spark was used because of it power for working easily with big data. 
+The Warehouse option gives opportunity to write, query and read terrabyte of data. We also have proper data structiuring and reduction of Data Lakes chaotic feature among other reasons. Amazons Redshift tool is used as a warehouse to store these datasets in separate facts and dimensional tables. 
+Finally, the the workflow was managed and orchestracted by apache airflow. For example, data preprocessing stage, staging of data to S3 and s3 to Redshif. Airflow is used in this case to ensure each of the above processes are carried out in the right order, and the right scheduled time, making the ETL process as seamless as possible.
+
+
+The file location: usa-immigration-pipelineplugins/etl
+### The Data Schema.
 STAGING_IMMIGRATIONS (staging table) as loaded from S3
 |-- immigrant_id: (bigint) A unique, spark-generated id representing each immigrant
 |-- year: (integer) year the data was captured
@@ -93,6 +107,7 @@ IMMIGRANTS (dim table)
 |-- resident_country: (varchar) The resident country of the immigrant
 |-- address: (varchar) Current US address of the immigrant (state code)
 
+![ERD](https://user-images.githubusercontent.com/50584494/130909152-b0d60b1b-d6e1-4348-834f-6a950dedd2bd.png)
 
 ### Set up Environment
 *   Install or Update your python
