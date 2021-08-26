@@ -113,7 +113,7 @@ IMMIGRANTS (dim table)
 
 
 ### SAMPLE QUERY
-The number of male and female immigrants for the available years?
+The number of male and female immigrants for the available years
 
 	SELECT gender, COUNT(gender)
 	FROM immigrants
