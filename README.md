@@ -109,7 +109,7 @@ IMMIGRANTS (dim table)
 |-- resident_country: (varchar) The resident country of the immigrant
 |-- address: (varchar) Current US address of the immigrant (state code)
 
-![ERD](https://user-images.githubusercontent.com/50584494/130909152-b0d60b1b-d6e1-4348-834f-6a950dedd2bd.png)
+![rsz_erd](https://user-images.githubusercontent.com/50584494/130911652-f0228484-83ff-4cd8-b2a2-d3f6bdd6b42b.png)
 
 
 ### SAMPLE QUERY
@@ -119,8 +119,6 @@ The number of male and female immigrants for the available years
 	FROM immigrants
 	WHERE gender = 'M' or gender = 'F'
 	GROUP BY gender;
-
-![rsz_erd](https://user-images.githubusercontent.com/50584494/130911652-f0228484-83ff-4cd8-b2a2-d3f6bdd6b42b.png)
 
 ### Set up Environment
 *   Install or Update your python
