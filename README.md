@@ -120,6 +120,7 @@ The number of male and female immigrants for the available years
 	WHERE gender = 'M' or gender = 'F'
 	GROUP BY gender;
 
+![rsz_erd](https://user-images.githubusercontent.com/50584494/130911652-f0228484-83ff-4cd8-b2a2-d3f6bdd6b42b.png)
 
 ### Set up Environment
 *   Install or Update your python
