@@ -120,6 +120,9 @@ The number of male and female immigrants for the available years
 	WHERE gender = 'M' or gender = 'F'
 	GROUP BY gender;
 
+<img width="370" alt="rsz_q3" src="https://user-images.githubusercontent.com/50584494/130911879-0e429fc2-0b36-4741-8080-7e35fc5b92bb.png">
+
+
 ### Set up Environment
 *   Install or Update your python
 *	Install or update Airflow 
