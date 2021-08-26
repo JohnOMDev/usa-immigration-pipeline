@@ -25,7 +25,9 @@ The Warehouse option gives opportunity to write, query and read terrabyte of dat
 Finally, the the workflow was managed and orchestracted by apache airflow. For example, data preprocessing stage, staging of data to S3 and s3 to Redshif. Airflow is used in this case to ensure each of the above processes are carried out in the right order, and the right scheduled time, making the ETL process as seamless as possible.
 
 
-The file location: usa-immigration-pipelineplugins/etl
+The file location: `usa-immigration-pipelineplugins/etl`
+
+
 ### The Data Schema.
 STAGING_IMMIGRATIONS (staging table) as loaded from S3
 |-- immigrant_id: (bigint) A unique, spark-generated id representing each immigrant
